@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import logoSVG from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -22,7 +23,10 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
-        <h1>Wind-BNB</h1>
+        <nav>
+          <img src={logoSVG} alt="wind bnb logo" id="nav-logo" />
+          <input type="text" placeholder="Search" id="nav-search"></input>
+        </nav>
       </div>
     )
   }

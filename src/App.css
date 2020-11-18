@@ -2,3 +2,21 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#nav-logo {
+  height: 1.6em;
+}
+
+#nav-search {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0.7em;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
