@@ -29,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.3em;
 }
 
 #rating {
@@ -39,10 +40,19 @@
 .ratings-div {
     display: flex;
     align-items: center;
+    margin-right: 0.5em;
 }
 
 .ratings-div svg {
     height: 12px;
     width: 12px;
     color: #EB5757;
+}
+
+#superHost {
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 2px 4px;
 }
