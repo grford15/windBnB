@@ -36,7 +36,14 @@ class App extends React.Component {
         <div className="property-container">
           {properties.length ? (
             properties.map((property, index) => 
-            <PropertyCard title={property.title} index={index} key={index} photo={property.photo} type={property.type}/>)
+            <PropertyCard title={property.title} 
+            index={index} 
+            key={index} 
+            photo={property.photo} 
+            type={property.type}
+            rating={property.rating}
+            superHost={property.superHost}
+            />)
           )
           : <p>Didn't work</p>
           }
