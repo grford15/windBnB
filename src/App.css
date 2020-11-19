@@ -20,6 +20,7 @@ nav {
   padding: 0.7em;
   border: none;
   font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
 }
 
 .property-container {
@@ -28,4 +29,28 @@ nav {
   grid-gap: 1em;
   width: 90vw;
   margin: auto;
+}
+
+.filter-search {
+  display: flex;
+}
+
+#filter {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0.7em;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  margin-right: 1em;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#filter svg {
+  margin-right: 0.3em;
+  height: 1.3em;
+  width: 1.3em;
 }
