@@ -10,9 +10,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       properties: [],
-      active: false
+      active: false,
+      location: '',
+      guests: 0
     };
     this.setActive = this.setActive.bind(this);
+    this.handleGuestChange = this.handleGuestChange.bind(this);
+    this.searchFilter = this.searchFilter.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +40,23 @@ class App extends React.Component {
     })
   }
 
+  searchFilter(e) {
+    e.preventDefault();
+    console.log(this.state.guests);
+    const currentState = this.state.active;
+    this.setState({
+      active: !currentState
+    })
+  }
+
+  handleGuestChange(e) {
+    this.setState({
+      guests: parseInt(e.target.value)
+    })
+  }
+
   render() {
-    const { properties, active } = this.state;
+    const { properties, active, location, guests } = this.state;
 
     return (
       <div className="App">
@@ -52,8 +71,8 @@ class App extends React.Component {
         </nav>
         <div className={`filter-drawer ${active ? "active" : null}`}>
           <input type="text" placeholder="Location"></input>
-          <input type="text" placeholder="Guests"></input>
-          <button id="filter-search">
+          <input type="number" placeholder="Guests" value={guests} onChange={this.handleGuestChange} ></input>
+          <button id="filter-search" onClick={this.searchFilter}>
             <AiOutlineSearch/>
             Search</button>
           <button id="close-button" onClick={this.setActive}>
@@ -74,7 +93,7 @@ class App extends React.Component {
               />
             ))
           ) : (
-            <p>Didn't work</p>
+            <p></p>
           )}
         </div>
       </div>
