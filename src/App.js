@@ -10,7 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       properties: [],
+      active: false
     };
+    this.setActive = this.setActive.bind(this);
   }
 
   componentDidMount() {
@@ -26,21 +28,34 @@ class App extends React.Component {
       });
   }
 
+  setActive(e) {
+    e.preventDefault();
+    const currentState = this.state.active;
+    this.setState({
+      active: !currentState
+    })
+  }
+
   render() {
-    const { properties } = this.state;
-    console.log(properties);
+    const { properties, active } = this.state;
 
     return (
       <div className="App">
         <nav>
           <img src={logoSVG} alt="wind bnb logo" id="nav-logo" />
           <div className="filter-search">
-            <button id="filter">
+            <button id="filter" onClick={this.setActive}>
               <AiOutlineControl />
               Filter</button>
             <input type="text" placeholder="Search" id="nav-search"></input>
           </div>
         </nav>
+        <div className={`filter-drawer ${active ? "active" : null}`}>
+          <h4>Filter</h4>
+          <button id="close-button" onClick={this.setActive}>
+            X
+          </button>
+        </div>
         <div className="property-container">
           {properties.length ? (
             properties.map((property, index) => (

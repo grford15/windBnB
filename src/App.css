@@ -23,6 +23,42 @@ nav {
   background: #ffffff;
 }
 
+.filter-drawer {
+  width: 100vw;
+  height: 25vh;
+  top: 0px;
+  z-index: 1;
+  position: absolute;
+  background: #ffffff;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.active {
+  visibility: visible;
+}
+
+#close-button {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0.5em;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  margin: 0.5em;
+  color: #f44336;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  font-size: 17px;
+}
+
 .property-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
