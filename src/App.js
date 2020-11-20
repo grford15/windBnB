@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import logoSVG from "./logo.svg";
 import PropertyCard from "./components/PropertyCard";
-import { AiOutlineControl } from 'react-icons/ai';
+import { AiOutlineControl, AiOutlineSearch } from 'react-icons/ai';
 import "./App.css";
 
 class App extends React.Component {
@@ -51,7 +51,11 @@ class App extends React.Component {
           </div>
         </nav>
         <div className={`filter-drawer ${active ? "active" : null}`}>
-          <h4>Filter</h4>
+          <input type="text" placeholder="Location"></input>
+          <input type="text" placeholder="Guests"></input>
+          <button id="filter-search">
+            <AiOutlineSearch/>
+            Search</button>
           <button id="close-button" onClick={this.setActive}>
             X
           </button>

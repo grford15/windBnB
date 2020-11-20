@@ -41,6 +41,35 @@ nav {
   visibility: visible;
 }
 
+.filter-drawer input {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0.7em;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  margin: 0.5em;
+  width: 25em;
+}
+
+#filter-search {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0.7em 1.1em;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background: #EB5757;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+#filter-search svg {
+  margin-right: 5px;
+}
+
 #close-button {
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
@@ -49,7 +78,7 @@ nav {
   font-family: 'Montserrat', sans-serif;
   background: #ffffff;
   margin: 0.5em;
-  color: #f44336;
+  color: #EB5757;
   cursor: pointer;
   height: 2em;
   width: 2em;
@@ -57,6 +86,7 @@ nav {
   justify-content: center;
   align-items: center;  
   font-size: 17px;
+  font-weight: 600;
 }
 
 .property-container {
