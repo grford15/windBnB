@@ -12,11 +12,13 @@ class App extends React.Component {
       properties: [],
       active: false,
       location: '',
-      guests: 0
+      guests: 0,
+      filtered: false
     };
     this.setActive = this.setActive.bind(this);
     this.handleGuestChange = this.handleGuestChange.bind(this);
     this.searchFilter = this.searchFilter.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
   }
 
   componentDidMount() {
@@ -34,24 +36,30 @@ class App extends React.Component {
 
   setActive(e) {
     e.preventDefault();
-    const currentState = this.state.active;
+    const activeState = this.state.active;
     this.setState({
-      active: !currentState
+      active: !activeState
     })
   }
 
   searchFilter(e) {
     e.preventDefault();
-    console.log(this.state.guests);
     const currentState = this.state.active;
     this.setState({
-      active: !currentState
+      active: !currentState,
+      filtered: true
     })
   }
 
   handleGuestChange(e) {
     this.setState({
       guests: parseInt(e.target.value)
+    })
+  }
+
+  handleLocationChange(e) {
+    this.setState({
+      location: e.target.value
     })
   }
 
@@ -70,7 +78,7 @@ class App extends React.Component {
           </div>
         </nav>
         <div className={`filter-drawer ${active ? "active" : null}`}>
-          <input type="text" placeholder="Location"></input>
+          <input type="text" placeholder="Location" onChange={this.handleLocationChange}></input>
           <input type="number" placeholder="Guests" value={guests} onChange={this.handleGuestChange} ></input>
           <button id="filter-search" onClick={this.searchFilter}>
             <AiOutlineSearch/>
