@@ -3,6 +3,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -12,15 +13,6 @@ nav {
 
 #nav-logo {
   height: 1.6em;
-}
-
-#nav-search {
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  padding: 0.7em;
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  background: #ffffff;
 }
 
 .filter-drawer {
@@ -104,7 +96,7 @@ nav {
 #filter {
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  padding: 0.7em;
+  padding: 0.7em 1.5em;
   border: none;
   font-family: 'Montserrat', sans-serif;
   background: #ffffff;
@@ -113,6 +105,7 @@ nav {
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 
 #filter svg {

@@ -73,7 +73,6 @@ class App extends React.Component {
             <button id="filter" onClick={this.setActive}>
               <AiOutlineControl />
               Filter</button>
-            <input type="text" placeholder="Search" id="nav-search"></input>
           </div>
         </nav>
         <div className={`filter-drawer ${active ? "active" : null}`}>
