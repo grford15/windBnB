@@ -42,8 +42,7 @@ class App extends React.Component {
     })
   }
 
-  searchFilter(e) {
-    e.preventDefault();
+  searchFilter() {
     const currentState = this.state.active;
     this.setState({
       active: !currentState,
@@ -89,7 +88,9 @@ class App extends React.Component {
         </div>
         <div className="property-container">
           {properties.length ? (
-            properties.map((property, index) => (
+            properties.filter(property => property.maxGuests >= guests)
+            .filter(property => property.city.toLowerCase().includes(location.toLowerCase()))
+            .map((property, index) => (
               <PropertyCard
                 title={property.title}
                 index={index}
