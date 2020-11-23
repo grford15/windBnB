@@ -113,3 +113,19 @@ nav {
   height: 1.3em;
   width: 1.3em;
 }
+
+.properties-header {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#property-title {
+  color: #333333;
+}
+
+#property-stays {
+  color: #4F4F4F;
+}

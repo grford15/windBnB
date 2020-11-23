@@ -85,6 +85,12 @@ class App extends React.Component {
             X
           </button>
         </div>
+        <div className="properties-header">
+          <h2 id="property-title">Stays in Finland</h2>
+          {properties.length ? (
+            <h5 id="property-stays">{properties.length} Stays</h5>
+          ) : null}
+        </div>
         <div className="property-container">
           {properties.length ? (
             properties.filter(property => property.maxGuests >= guests)
